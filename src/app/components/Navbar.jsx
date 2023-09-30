@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 
+
 const navLinks = [
   {
     title: "About",
@@ -28,9 +29,18 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
-          LOGO
+          className="text-2xl md:text-5xl text-white font-semibold">
+          
+          <div className="flex items-center">
+        <img
+          src="/images/tim-logo.png" // Replace with the path to your image
+          alt="Logo"
+          className="w-30 h-10 mr-5 md:w-30 md:h-20 mr-5" 
+          priority={true}// Adjust the size and margin as needed
+        />
+        
+      </div>
+          
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
